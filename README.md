@@ -20,4 +20,4 @@ This project includes the use of JavaScript, HTML/CSS. Using an array of to-do i
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+https://thetanos24.github.io/se_project_todo-app/
