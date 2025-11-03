@@ -28,7 +28,7 @@ class Popup {
     document.removeEventListener("keyup", this._handleEscapeClose);
   }
 
-  setEventListener() {
+  setEventListeners() {
     this._popupCloseBtn.addEventListener("click", () => {
       this.close();
     });
