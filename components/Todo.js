@@ -38,9 +38,9 @@ class Todo {
     todoNameEl.textContent = this._data.name;
 
     this._todoDate.textContent = "";
-    const d = new Date(this._data.date);
-    if (!isNaN(d.getTime())) {
-      this._todoDate.textContent = `Due: ${d.toLocaleDateString()}`;
+    const dueDate = new Date(this._data.date);
+    if (!isNaN(dueDate.getTime())) {
+      this._todoDate.textContent = `Due: ${dueDate.toLocaleDateString()}`;
     }
 
     this._generateCheckboxEl();

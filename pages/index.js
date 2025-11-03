@@ -20,9 +20,9 @@ function handleCheck(completed) {
 }
 
 function handleDelete(completed) {
+  todoCounter.updateTotal(false);
   if (completed) {
     todoCounter.updateCompleted(false);
-    todoCounter.updateTotal(false);
   }
 }
 
@@ -32,16 +32,14 @@ const generateTodo = (data) => {
   return todoElement;
 };
 
-const section = new Section(
-  {
-    items: initialTodos,
-    renderer: (item) => {
-      const todo = generateTodo(item);
-      section.addItem(todo);
-    },
+const section = new Section({
+  items: initialTodos,
+  renderer: (item) => {
+    const todo = generateTodo(item);
+    section.addItem(todo);
   },
-  todosList
-);
+  containerSelector: ".todos__list",
+});
 
 section.renderItems();
 
